@@ -1,0 +1,1449 @@
+body,html{
+    margin:0;
+    padding:0;
+    height:100%;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    transition-duration: 0.3s;
+}
+
+a{
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+    overflow: auto;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+	background: #f1f1f1;
+	border-radius:40px;
+    overflow: auto;
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #3D444A; 
+	border-radius: 20px;
+    overflow: auto;
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: grey; 
+	cursor: pointer;
+	overflow: auto;
+}
+
+header{
+    background-color: transparent;
+    height:1em;
+    padding:0.5em;
+    position: fixed;
+    width: 100%;
+}
+
+figure{
+    margin:0;
+}
+
+.floatTop{
+	height:40px;
+	width:40px;
+	position: fixed;
+	bottom:20px;
+	right:20px;
+	border-radius: 40px;
+	transition: 0.5s ease;
+	background:transparent;
+}
+.floatChange{
+	background:black;
+}
+.floatTop:hover{
+	background: grey;
+	cursor: pointer;
+}
+
+@media only screen and (max-width:640px){
+
+    header{
+        background:white;
+        height: 5%;
+        display: grid;
+        grid-template-columns: auto auto;
+        z-index: 1;
+    }
+
+    .userName{
+        display: grid;
+        grid-template-columns: 30px auto ;
+    }
+
+    .menuBar{
+        width:20px;
+        margin-left:70%;
+        padding-top: 0.8em;
+        cursor: pointer;
+    }
+
+    .userName h3{
+        display:none;
+    }
+
+    .positionUser{
+        padding-top:0.8em;
+        padding-left:0.6em;
+        display: inline;
+    }
+
+    .photoUser{
+        margin: auto;
+        width:30px;
+        height:30px;
+    }
+
+    nav ul{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom:0;
+        background: rgb(36,41,44);
+        height: 0;
+        margin-top:0;
+        list-style: none;
+        overflow-x: hidden;
+        transition: 0.5s ease-in-out;
+    }
+
+    nav ul li a{
+        text-decoration: none;
+        font-size: 1.8em;
+        display: block;
+        padding: 1em;
+        color:#818181;
+        text-align: left;
+    }
+
+    nav ul li a:hover{
+        color: white;
+        font-size: 1.5em;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    nav ul p{
+        padding-bottom: 0px;
+        text-align: center;
+        color: #818181;
+        display: none;
+    }
+
+    .exitButton{
+        margin-bottom: 1em;
+        margin: 20%;
+        text-align: right;
+    }
+
+    .exitButton img{
+        width: 20px;
+        cursor: pointer;
+    }
+    .exitButton img:hover{
+        width: 15px;
+        cursor: pointer;
+    }
+        
+    .userName p{
+        display: none;
+    }
+
+    .bannerHolder{
+        background-image: url("Images/Banner.jpg");
+        background-size: contain;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        width:100%;
+        height: 200px;
+        display: grid;
+        grid-template-rows: auto;
+
+    }
+
+    .introductionHolder{
+        background-color: white;
+        width: 100%;
+        height: 450px;
+        display: grid;
+        grid-template-rows: 50% 50%;
+    }
+
+    .dscImage1{
+        width:300px;
+        margin: auto auto auto auto;
+    }
+
+    .aboutDSC{
+        font-size: 0.7em;
+        margin: auto auto auto auto;
+        padding-right: 10%;
+        padding-left:10%;
+        text-align: justify;
+    }
+
+    .team{
+        background-color: whitesmoke;
+        height:800px;
+        width:100%;
+        display: grid;
+        grid-template-rows: 100px auto;
+    }
+    .team p{
+        text-align: center;
+        font-size: 2em;
+        font-weight: 900;   
+    }
+
+    .organizersContainer {
+        height: auto;
+        width: 100%; 
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: auto auto auto;
+        
+    }
+    
+    .organizer {
+        cursor: pointer;
+        position: relative;
+        height: 60%;
+        width:50%;
+        margin: 2%;
+        padding: 10px;
+        margin-left:auto;
+        margin-right: auto;
+        float: left;
+        transition: 0.3s;
+        background-color: white;
+        transition-timing-function: cubic-bezier(.03,.98,.51,1.05);
+    }
+    
+    .organizer > h1 {
+        font-size: 13px;
+        font-weight: 700;
+        margin: 5px 0; 
+        width: auto;
+        text-transform: none;
+        padding: 0;
+        text-align: left;
+    }
+    
+    .organizer > .organizerPost {
+        font-size: 10px;
+        font-weight: 400;
+        margin: 0px 0; 
+        opacity: 0.8;
+    }
+    
+    .organizer > .staticImage {
+        filter: grayscale(100);
+        /*Set Transition so there is an effect*/
+        transition: 0.3s; /*or*/
+        transition-timing-function: ease-in-out;
+    }
+    
+    .organizer:hover .staticImage {
+        filter: grayscale(0);
+    }
+    
+    .organizer:hover {
+        transform: scale(1.2);
+        background-color:white;
+    }
+
+    .membershipIcons{
+        background-color: white;
+        width:100%;
+        height:600px;
+        display: grid;
+        grid-template-rows: 300px auto 300px auto;
+    }
+
+    .membershipIcons img{
+        display: block;
+        margin: auto auto auto auto;
+        width:180px;
+    }
+
+    .coreTeam{
+        margin:auto auto auto auto;
+    }
+    .coreTeam figcaption{
+        font-size:1.5em;
+        font-weight: bolder; 
+        text-align: center;     
+    }
+    .coreTeam p{
+        font-size:1em;  
+        text-align: justify;  
+        margin-left: 5%;
+        margin-right: 5%; 
+    }
+
+    .prTeam{
+        margin:auto auto auto auto;
+    }
+    .prTeam figcaption{
+        font-size: 1.5em;
+        font-weight: bolder; 
+        text-align: center; 
+    }
+    .prTeam p{
+        font-size:1em;
+        text-align: justify;  
+        margin-right: 5%;
+        margin-left:5%;  
+    }
+
+    .membershipIcons input[type=button]{
+        background:transparent;
+        outline: none;
+        border: none;
+        font-size: 1em;
+        transition: 0.5s ease-in-out;
+        padding-top:0.5em;
+        padding-bottom: 0.5em;
+        padding-right: 0.5em;
+        padding-left: 0.5em;
+        display: block;
+        border: 1px solid #3D444A;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        margin-top: 0.5em;
+        
+    }
+    .membershipIcons input[type=button]:hover{
+		box-shadow: inset 518px 0px 0px #3D444A;
+        color:white;
+        cursor: pointer;
+	}
+}
+
+@media only screen and (min-width:641px) and (max-width:768px){
+
+    header{
+        background:white;
+        height: 5%;
+        display: grid;
+        grid-template-columns: auto auto;
+        z-index: 1;
+    }
+
+    .bannerIndex p{
+        text-align: center;
+        padding-top: 4em;
+        font-size: 2em;
+    }
+
+    .userName{
+        display: grid;
+        grid-template-columns: 30px auto;
+    }
+
+    .menuBar{
+        width:30px;
+        padding-top: 0.8em;
+        cursor: pointer;
+        margin-left:80%;
+    }
+
+    .userName h3{
+        display:none;
+    }
+
+    .positionUser{
+        padding-top:1em;
+        padding-left: 1.9em;
+        display: inline;
+    }
+
+    .photoUser{
+        margin: auto;
+        width:30px;
+        height:30px;
+    }
+
+    .userName p{
+        display: none;
+    }
+
+    nav ul{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom:0;
+        background: rgb(36,41,44);
+        height: 0;
+        margin-top:0;
+        list-style: none;
+        overflow-x: hidden;
+        transition: 0.5s ease-in-out;
+    }
+
+    nav ul li a{
+        text-decoration: none;
+        font-size: 2.5em;
+        display: block;
+        padding: 1em;
+        color:#818181;
+        text-align: left;
+    }
+
+    nav ul li a:hover{
+        color: white;
+        font-size: 2.3em;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    nav ul p{
+        padding-bottom: 0px;
+        text-align: center;
+        color: #818181;
+        display: none;
+    }
+
+    .exitButton{
+        margin-bottom: 1em;
+        text-align: right;
+        margin: 15%;
+    }
+
+    .exitButton img{
+        width: 20px;
+        cursor: pointer;
+    }
+
+    .exitButton img:hover{
+        width: 15px;
+        cursor: pointer;
+    }
+    .bannerHolder{
+        background-image: url("Images/Banner.jpg");
+        background-size: contain;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        width:100%;
+        height: 320px;
+        display: grid;
+        grid-template-rows: auto;
+
+    }
+
+    .introductionHolder{
+        background-color: white;
+        width: 100%;
+        height: 550px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .dscImage1{
+        width:350px;
+        margin: auto auto auto auto;
+    }
+
+    .aboutDSC{
+        font-size: 1em;
+        margin: auto auto auto auto;
+        padding-right: 10%;
+        text-align: justify;
+    }
+
+    .team{
+        background-color: whitesmoke;
+        height:1000px;
+        width:100%;
+        display: grid;
+        grid-template-rows: 100px auto;
+    }
+    .team p{
+        text-align: center;
+        font-size: 2em;
+        font-weight: 900;   
+    }
+
+    .organizersContainer {
+        height: auto;
+        width: 100%; 
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: auto auto auto;
+        
+    }
+    
+    .organizer {
+        cursor: pointer;
+        position: relative;
+        height: 70%;
+        width:50%;
+        margin: 2%;
+        padding: 10px;
+        margin-left:auto;
+        margin-right: auto;
+        float: left;
+        transition: 0.3s;
+        background-color: white;
+        transition-timing-function: cubic-bezier(.03,.98,.51,1.05);
+    }
+    
+    .organizer > h1 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        margin: 5px 0; 
+        width: auto;
+        text-transform: none;
+        padding: 0;
+        text-align: left;
+    }
+    
+    .organizer > .organizerPost {
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0px 0; 
+        opacity: 0.8;
+    }
+    
+    .organizer > .staticImage {
+        filter: grayscale(100);
+        /*Set Transition so there is an effect*/
+        transition: 0.3s; /*or*/
+        transition-timing-function: ease-in-out;
+    }
+    
+    .organizer:hover .staticImage {
+        filter: grayscale(0);
+    }
+    
+    .organizer:hover {
+        transform: scale(1.2);
+        background-color:white;
+    }
+
+    .membershipIcons{
+        background-color: white;
+        width:100%;
+        height:600px;
+        display: grid;
+        grid-template-rows: 320px auto 350px auto;
+    }
+
+    .membershipIcons img{
+        display: block;
+        margin: auto auto auto auto;
+        width:190px;
+    }
+
+    .coreTeam{
+        margin:auto auto auto auto;
+    }
+    .coreTeam figcaption{
+        font-size:2.5em;
+        font-weight: bolder;
+        text-align: center;  
+    }
+    .coreTeam p{
+        font-size:1.2em;   
+        text-align: justify;
+        margin-left:15%;
+        margin-right: 15%;    
+    }
+
+    .prTeam{
+        margin:auto auto auto auto;
+    }
+    .prTeam figcaption{
+        font-size: 2em;
+        font-weight: bolder;
+        text-align: center; 
+    }
+    .prTeam p{
+        font-size:1.2em;
+        text-align: justify;
+        margin-left:15%;
+        margin-right: 15%;    
+    }
+
+    .membershipIcons input[type=button]{
+        background:transparent;
+        outline: none;
+        border: none;
+        font-size: 1.8em;
+        transition: 0.5s ease-in-out;
+        padding-top:0.5em;
+        padding-bottom: 0.5em;
+        padding-right: 0.5em;
+        padding-left: 0.5em;
+        display: block;
+        border: 1px solid #3D444A;
+        margin: auto auto auto auto;
+        
+    }
+    .membershipIcons input[type=button]:hover{
+		box-shadow: inset 518px 0px 0px #3D444A;
+        color:white;
+        cursor: pointer;
+	}
+
+    
+}
+
+@media only screen and (min-width:769px) and (max-width:1024px){
+    
+    header{
+        background:white;
+        height: 5%;
+        display: grid;
+        grid-template-columns: auto auto;
+        z-index: 1;
+    }
+
+    .bannerIndex p{
+        text-align: center;
+        padding-top: 4.3em;
+        font-size: 2.7em;
+    }
+
+    .userName{
+        display: grid;
+        grid-template-columns: 30px auto;
+    }
+
+    .menuBar{
+        width:30px;
+        margin-left:85%;
+        padding-top: 0.1em;
+        cursor: pointer;
+    }
+
+    .userName h3{
+        display:none;
+    }
+
+    .positionUser{
+        padding-top:1em;
+        display: inline;
+        padding-left:2em;
+    }
+
+    .photoUser{
+        margin: auto;
+        width:30px;
+        height:30px;
+    }
+
+    .userName p{
+        display: none;
+    }
+
+    nav ul{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom:0;
+        background: rgb(36,41,44);
+        height: 0;
+        margin-top:0;
+        list-style: none;
+        overflow-x: hidden;
+        transition: 0.5s ease-in-out;
+    }
+
+    nav ul li a{
+        text-decoration: none;
+        text-align: left;
+        font-size: 3.5em;
+        display: block;
+        padding: 3%;
+        color:#818181;
+    }
+
+    nav ul li a:hover{
+        color: white;
+        font-size: 3em;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    nav ul p{
+        padding-bottom: 0px;
+        text-align: center;
+        color: #818181;
+        display: none;
+    }
+
+    .exitButton{
+        margin-bottom: 1em;
+        margin: 10%;
+        text-align: right;
+    }
+
+    .exitButton img{
+        width: 25px;
+        cursor: pointer;
+    }
+
+    .exitButton img:hover{
+        width: 20px;
+        cursor: pointer;
+    }
+
+    .bannerHolder{
+        background-image: url("Images/Banner.jpg");
+        background-size: contain;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        width:100%;
+        height: 460px;
+
+        display: grid;
+        grid-template-rows: auto;
+
+    }
+
+    .introductionHolder{
+        background-color: white;
+        width: 100%;
+        height: 550px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .dscImage1{
+        width:auto;
+        margin: auto auto auto auto;
+    }
+
+    .aboutDSC{
+        font-size: 1em;
+        margin: auto auto auto auto;
+        padding-right: 10%;
+        text-align: justify;
+    }
+
+    .team{
+        background-color: whitesmoke;
+        height:1000px;
+        width:100%;
+        display: grid;
+        grid-template-rows: 100px auto;
+    }
+    .team p{
+        text-align: center;
+        font-size: 2em;
+        font-weight: 900;   
+    }
+
+    .organizersContainer {
+        height: auto;
+        width: 100%; 
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: auto auto auto;
+        
+    }
+    
+    .organizer {
+        cursor: pointer;
+        position: relative;
+        height: 80%;
+        width:50%;
+        margin: 2%;
+        padding: 10px;
+        margin-left:auto;
+        margin-right: auto;
+        float: left;
+        transition: 0.3s;
+        background-color: white;
+        transition-timing-function: cubic-bezier(.03,.98,.51,1.05);
+    }
+    
+    .organizer > h1 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        margin: 5px 0; 
+        width: auto;
+        text-transform: none;
+        padding: 0;
+        text-align: left;
+    }
+    
+    .organizer > .organizerPost {
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0px 0; 
+        opacity: 0.8;
+    }
+    
+    .organizer > .staticImage {
+        filter: grayscale(100);
+        /*Set Transition so there is an effect*/
+        transition: 0.3s; /*or*/
+        transition-timing-function: ease-in-out;
+    }
+    
+    .organizer:hover .staticImage {
+        filter: grayscale(0);
+    }
+    
+    .organizer:hover {
+        transform: scale(1.2);
+        background-color:white;
+    }
+
+    .membershipIcons{
+        background-color: white;
+        width:100%;
+        height:600px;
+        display: grid;
+        grid-template-columns: 200px auto 200px auto;
+    }
+
+    .membershipIcons img{
+        display: block;
+        margin: auto auto auto auto;
+        width:150px;
+    }
+
+    .coreTeam{
+        margin:auto auto auto auto;
+    }
+    .coreTeam figcaption{
+        font-size:1.8em;
+        font-weight: bolder;      
+    }
+    .coreTeam p{
+        font-size:1em;    
+    }
+
+    .prTeam{
+        margin:auto auto auto auto;
+    }
+    .prTeam figcaption{
+        font-size: 1.8em;
+        font-weight: bolder; 
+    }
+    .prTeam p{
+        font-size:1em;
+        margin-right: 15%;  
+    }
+
+    .membershipIcons input[type=button]{
+        background:transparent;
+        outline: none;
+        border: none;
+        font-size: 1.2em;
+        transition: 0.5s ease-in-out;
+        padding-top:0.5em;
+        padding-bottom: 0.5em;
+        padding-right: 0.5em;
+        padding-left: 0.5em;
+        display: block;
+        border: 1px solid #3D444A;
+        
+    }
+    .membershipIcons input[type=button]:hover{
+		box-shadow: inset 518px 0px 0px #3D444A;
+        color:white;
+        cursor: pointer;
+	}
+}
+
+
+@media only screen and (min-width:1025px) and (max-width:1200px){
+
+    header{
+        background:white;
+        height: 5%;
+        display: grid;
+        grid-template-columns: auto auto;
+        z-index: 1;
+    }
+
+    .bannerIndex p{
+        text-align: center;
+        padding-top: 4.3em;
+        font-size: 2.7em;
+    }
+
+    .userName{
+        display: grid;
+        grid-template-columns: 30px auto;
+    }
+
+    .menuBar{
+        width:35px;
+        margin-left:85%;
+        padding-top: 0.1em;
+    }
+
+    .menuBar:hover{
+        width:40px;
+        cursor: pointer;
+    }
+
+    .userName h3{
+        display:none;
+    }
+
+    .positionUser{
+        padding-top:1em;
+        display: inline;
+        padding-left:2em;
+    }
+
+    .photoUser{
+        margin: auto;
+        width:30px;
+        height:30px;
+    }
+
+    .userName p{
+        display: none;
+    }
+
+    nav ul{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom:0;
+        background: rgb(36,41,44);
+        height: 0;
+        margin-top:0;
+        list-style: none;
+        overflow-x: hidden;
+        transition: 0.5s ease-in-out;
+    }
+
+    nav ul li{
+        transition: 0.5s ease-in-out;
+    }
+
+    nav ul li a{
+        text-decoration: none;
+        font-size: 2em;
+        display: block;
+        padding: 3%;
+        color:#818181;
+        text-align: left;
+        transition: 0.3s ease-in;
+    }
+
+    nav ul li a:hover{
+        color: white;
+        font-size: 2.2em;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    nav ul p{
+        padding-bottom: 0px;
+        text-align: center;
+        color: #818181;
+    }
+
+
+    .exitButton{
+        margin-bottom: 1em;
+        margin: 6%;
+        text-align: right;
+        margin-right: 6%;
+    }
+
+    .exitButton img{
+        width: 25px;
+        transition: 0.5s ease-in-out;
+        
+    }
+
+    .exitButton img:hover{
+        width: 20px;
+        cursor: pointer;
+    }
+
+    .bannerHolder{
+        background-image: url("Images/Banner.jpg");
+        background-size: contain;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        width:100%;
+        height: 600px;
+        display: grid;
+        grid-template-rows: auto;
+
+    }
+
+    .introductionHolder{
+        background-color: white;
+        width: 100%;
+        height: 550px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .dscImage1{
+        width:450px;
+        margin: auto auto auto auto;
+    }
+
+    .aboutDSC{
+        font-size: 1.3em;
+        margin: auto auto auto auto;
+        padding-right: 10%;
+        text-align: justify;
+    }
+
+    .team{
+        background-color: whitesmoke;
+        height:1000px;
+        width:100%;
+        display: grid;
+        grid-template-rows: 100px auto;
+    }
+    .team p{
+        text-align: center;
+        font-size: 2em;
+        font-weight: 900;   
+    }
+
+    .organizersContainer {
+        height: auto;
+        width: 100%; 
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: auto auto auto;
+        
+    }
+    
+    .organizer {
+        cursor: pointer;
+        position: relative;
+        height: 80%;
+        width:50%;
+        margin: 2%;
+        padding: 10px;
+        margin-left:auto;
+        margin-right: auto;
+        float: left;
+        transition: 0.3s;
+        background-color: white;
+        transition-timing-function: cubic-bezier(.03,.98,.51,1.05);
+    }
+    
+    .organizer > h1 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        margin: 5px 0; 
+        width: auto;
+        text-transform: none;
+        padding: 0;
+        text-align: left;
+    }
+    
+    .organizer > .organizerPost {
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0px 0; 
+        opacity: 0.8;
+    }
+    
+    .organizer > .staticImage {
+        filter: grayscale(100);
+        /*Set Transition so there is an effect*/
+        transition: 0.3s; /*or*/
+        transition-timing-function: ease-in-out;
+    }
+    
+    .organizer:hover .staticImage {
+        filter: grayscale(0);
+    }
+    
+    .organizer:hover {
+        transform: scale(1.2);
+        background-color:white;
+    }
+
+    .membershipIcons{
+        background-color: white;
+        width:100%;
+        height:600px;
+        display: grid;
+        grid-template-columns: 300px auto 300px auto;
+    }
+
+    .membershipIcons img{
+        display: block;
+        margin: auto auto auto auto;
+        width:200px;
+    }
+
+    .coreTeam{
+        margin:auto auto auto auto;
+    }
+    .coreTeam figcaption{
+        font-size:2em;
+        font-weight: bolder;      
+    }
+    .coreTeam p{
+        font-size:1em;    
+    }
+
+    .prTeam{
+        margin:auto auto auto auto;
+    }
+    .prTeam figcaption{
+        font-size: 2em;
+        font-weight: bolder; 
+    }
+    .prTeam p{
+        font-size:1em;
+        margin-right: 12%;  
+    }
+
+    .membershipIcons input[type=button]{
+        background:transparent;
+        outline: none;
+        border: none;
+        font-size: 1.4em;
+        transition: 0.5s ease-in-out;
+        padding-top:0.5em;
+        padding-bottom: 0.5em;
+        padding-right: 0.5em;
+        padding-left: 0.5em;
+        display: block;
+        border: 1px solid #3D444A;
+        
+    }
+    .membershipIcons input[type=button]:hover{
+		box-shadow: inset 518px 0px 0px #3D444A;
+        color:white;
+        cursor: pointer;
+	}
+}
+
+
+@media only screen and (min-width:1200px){
+
+    header{
+        background:white;
+        height: 5%;
+        display: grid;
+        grid-template-columns: auto auto;
+        z-index: 1;
+    }
+
+    .userName{
+        display: grid;
+        grid-template-columns: 30px auto;
+    }
+
+    .menuBar{
+        width:35px;
+        margin-left:88%;
+        margin-top:0.3%;
+        transition: 0.5s ease-in-out;
+    }
+
+    .menuBar:hover{
+        width:30px;
+        cursor: pointer;
+    }
+
+    .userName h3{
+        display:none;
+    }
+
+    .positionUser{
+        padding-top:1em;
+        display: inline;
+        padding-left:2em;
+    }
+
+    .photoUser{
+        margin: auto;
+        width:30px;
+        height:30px;
+    }
+
+    .userName p{
+        display: none;
+    }
+
+    nav ul{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom:0;
+        background: rgb(36,41,44);
+        height: 0;
+        margin-top:0;
+        list-style: none;
+        overflow-x: hidden;
+        transition: 0.5s ease-in-out;
+        z-index: 1;
+    }
+
+    nav ul li{
+        transition: 0.5s ease-in-out;
+    }
+
+    nav ul li a{
+        text-decoration: none;
+        margin-top: 1%;
+        font-size:3.5em;
+        display: block;
+        padding: 2%;
+        color:#818181;
+        text-align: left;
+        overflow-x: hidden;
+        transition: 0.3s ease-in;
+    }
+
+    nav ul li a:hover{
+        color: white;
+        font-size: 3em;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    nav ul p{
+        text-align: center;
+        color: #818181;
+    }
+
+
+    .exitButton{
+        margin-top: 2em;
+        text-align: right;
+        margin-right: 6%;
+    }
+
+    .exitButton img{
+        width: 25px;
+        transition: 0.5s ease-in-out;
+        
+    }
+
+    .exitButton img:hover{
+        width: 20px;
+        cursor: pointer;
+    }
+
+    .bannerHolder{
+        background-image: url("Images/Banner.jpg");
+        background-size: contain;
+        background-attachment: fixed;
+        width:100%;
+        height: 600px;
+        display: grid;
+        grid-template-rows: auto;
+
+    }
+
+    .bannerLogo{
+        margin-top: 80px;
+    }
+    
+    #logo{
+        width:550px;
+        height: 400px;
+    }
+
+    .introductionHolder{
+        background-color: white;
+        width: 100%;
+        height: 550px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .dscImage1{
+        width:500px;
+        margin: auto auto auto auto;
+    }
+
+    .aboutDSC{
+        font-size: 1.3em;
+        margin: auto auto auto auto;
+        padding-right: 10%;
+        text-align: justify;
+    }
+
+    .team{
+        background-color: whitesmoke;
+        height:1500px;
+        width:100%;
+        display: grid;
+        grid-template-rows: 200px auto;
+    }
+    .team p{
+        text-align: center;
+        font-size: 3.5em;
+        font-weight: bolder;  
+    }
+
+    .organizersContainer {
+        height: auto;
+        width: 100%; 
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: auto auto auto;
+        
+    }
+    
+    .organizer {
+        cursor: pointer;
+        position: relative;
+        height: 80%;
+        width:50%;
+        margin: 2%;
+        padding: 10px;
+        margin-left:auto;
+        margin-right: auto;
+        float: left;
+        transition: 0.3s;
+        background-color: white;
+        transition-timing-function: cubic-bezier(.03,.98,.51,1.05);
+    }
+    
+    .organizer > h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        margin: 5px 0; 
+        width: auto;
+        text-transform: none;
+        padding: 0;
+        text-align: left;
+    }
+    
+    .organizer > .organizerPost {
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0px 0; 
+        opacity: 0.8;
+    }
+    
+    .organizer > .staticImage {
+        filter: grayscale(100);
+        /*Set Transition so there is an effect*/
+        transition: 0.3s; /*or*/
+        transition-timing-function: ease-in-out;
+    }
+    
+    .organizer:hover .staticImage {
+        filter: grayscale(0);
+    }
+    
+    .organizer:hover {
+        transform: scale(1.1);
+        background-color:white;
+    }
+
+    .membershipIcons{
+        background-color: white;
+        width:100%;
+        height:600px;
+        display: grid;
+        grid-template-columns: 400px auto 400px auto;
+    }
+
+    .membershipIcons img{
+        display: block;
+        margin: auto auto auto auto;
+        width:300px;
+    }
+
+    .coreTeam{
+        margin:auto auto auto auto;
+    }
+    .coreTeam figcaption{
+        font-size:2.2em;
+        font-weight: bolder;      
+    }
+    .coreTeam p{
+        font-size:1.2em;    
+    }
+
+    .prTeam{
+        margin:auto auto auto auto;
+    }
+    .prTeam figcaption{
+        font-size: 2.2em;
+        font-weight: bolder; 
+    }
+    .prTeam p{
+        font-size:1.2em;
+        margin-right: 12%;  
+    }
+
+    .membershipIcons input[type=button]{
+        background:transparent;
+        outline: none;
+        border: none;
+        font-size: 1.8em;
+        transition: 0.5s ease-in-out;
+        padding-top:0.5em;
+        padding-bottom: 0.5em;
+        padding-right: 0.5em;
+        padding-left: 0.5em;
+        display: block;
+        border: 1px solid #3D444A;
+        
+    }
+    .membershipIcons input[type=button]:hover{
+		box-shadow: inset 518px 0px 0px #3D444A;
+        color:white;
+        cursor: pointer;
+	}
+    
+    .floatTop{
+        height:40px;
+        width:40px;
+        position: fixed;
+        bottom:20px;
+        right:20px;
+        border-radius: 40px;
+        transition: 0.5s ease;
+        background:#515152;
+        z-index:0;
+    }
+    .floatChange{
+        background:transparent;
+    }
+    .floatTop:hover{
+        background: grey;
+        cursor: pointer;
+        
+    }
+}
