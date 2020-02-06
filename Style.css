@@ -49,24 +49,6 @@ figure{
     margin:0;
 }
 
-.floatTop{
-	height:40px;
-	width:40px;
-	position: fixed;
-	bottom:20px;
-	right:20px;
-	border-radius: 40px;
-	transition: 0.5s ease;
-	background:transparent;
-}
-.floatChange{
-	background:black;
-}
-.floatTop:hover{
-	background: grey;
-	cursor: pointer;
-}
-
 @media only screen and (max-width:640px){
 
     header{
@@ -1425,7 +1407,32 @@ figure{
 		box-shadow: inset 518px 0px 0px #3D444A;
         color:white;
         cursor: pointer;
-	}
+    }
+    
+    .upcomingSection{
+        width: 100%;
+        background-color:whitesmoke;
+        height:600px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .upcomingSection img{
+        width:400px;
+        margin:auto auto auto auto;
+    }
+
+    .infoUpcoming figcaption{
+        font-size:2.5em;
+        font-weight: bolder;
+        margin:auto auto auto auto;
+        text-align: center;
+    }
+
+    .infoUpcoming p{
+        font-size: 1.2em;
+        margin:auto auto auto auto;
+    }
     
     .floatTop{
         height:40px;
