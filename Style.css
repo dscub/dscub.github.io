@@ -225,7 +225,7 @@ figure{
     }
     
     .organizer > .organizerPost {
-        font-size: 10px;
+        font-size: 8.5px;
         font-weight: 400;
         margin: 0px 0; 
         opacity: 0.8;
@@ -1604,7 +1604,7 @@ figure{
     .prTeam{
         margin:auto auto auto auto;
     }
-    
+
     .prTeam figcaption{
         font-size: 2.2em;
         font-weight: bolder; 
