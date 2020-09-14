@@ -1,0 +1,109 @@
+.aboutUsBannerHolder{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('Images/AboutUs.jpg');
+    height:100vh;
+    width: 100%;
+    background-position: top center;
+}
+
+.aboutUs{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding:80px;
+}
+
+.aboutUsHeader{
+    font-size:2.2em;
+    margin:0 auto 20px auto;
+}
+
+.aboutUsText{
+    font-size: 1.2em;
+    width:700px;
+}
+
+
+.aboutUsImage{
+    margin:0 40px;
+}
+
+.aboutUsImage img{
+    width: 450px;
+    flex: 1;
+}
+
+.faqSection{
+    width:100%;
+    padding:80px 0;
+    background-color: whitesmoke;
+}
+
+.faqHeader{
+    font-size:2.2em;
+    text-align: center;
+    margin:0 auto 50px auto;
+}
+
+.questionAnswerSection{
+    padding:0 200px;
+}
+
+.question{
+    font-size: 1.2em;
+}
+
+.answer{
+    font-size:1.2em;
+    margin:20px 15px;
+}
+
+.moreQuestions{
+    padding:80px 0;
+    width:100%;
+    text-align: center;
+}
+
+.moreQuestionText p{
+    font-size: 1.2em;
+}
+
+.moreQuestions a{
+    font-size:1.2em;
+}
+
+@media (max-width:768px){
+
+    .aboutUsBannerHolder{
+        background-position: center top;
+        height: 100vh;
+    }
+
+    .aboutUs{
+        flex-direction: column;
+        padding:80px 10px 80px 10px;
+    }
+
+    .aboutUsImage img{
+        width:350px;
+    }
+
+    .aboutUsText{
+        width:100%;
+    }
+
+    .aboutUsHeader{
+        margin:20px auto 20px auto;
+        text-align: center;
+    }
+
+    .questionAnswerSection{
+        padding:0;
+    }
+
+    .question{
+        margin:0 10px;
+    }
+}
